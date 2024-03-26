@@ -1,6 +1,9 @@
 # Distillation Policy Optimization
 Pytorch implementation of Distillation Policy Optimization (DPO) for **discrete domains**, a general learning framework for a set of on-policy algorithms, with off-policy data fully engaged.
 
+### Changes Made
+To accommodate to the discrete action, we only change the network architecture by encoding the observation first and then concatenate with action to predict the action-value function and the residual function. There is **no need for modifying any algorithmic component** as outlined in the paper.
+
 ### How To Use
 We reference the hyperparameters from original PPO paper and repository [Pytorch-PPO](https://github.com/ikostrikov/pytorch-a2c-ppo-acktr-gail):
 #### PPO
